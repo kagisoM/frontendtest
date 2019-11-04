@@ -1,0 +1,24 @@
+<div class="l-container u-padding--none u-margin--tp-sm">
+  <div class="row" >
+    <div class="u-content--center">
+      <div class="c-card u-text--centered">
+        <div class="c-card__content u-padding--none u-border--none" >
+
+			<div class="c-card__header u-border--bottom">
+				<img alt="" class="u-image u-image--150 u-image--rounded" [src]="employeeImageUrl">
+			</div>
+			<app-employee-details [label]="label" [value]="value"></app-employee-details>
+
+          <ul class="c-tabs l-row u-grid-justify--center u-padding--md">
+			  <app-anchor  (mouseenter)="mouseEnterHandler('user')" [isActive]="defaultActive" [imageUrl]="'../../assets/img/user.svg'"></app-anchor>
+			  <app-anchor  (mouseenter)="mouseEnterHandler('email')" [imageUrl]="'../../assets/img/email.svg'"></app-anchor>
+			  <app-anchor  (mouseenter)="mouseEnterHandler('calendar')" [imageUrl]="'../../assets/img/calendar.svg'"></app-anchor>
+			  <app-anchor  (mouseenter)="mouseEnterHandler('map-location')" [imageUrl]="'../../assets/img/map-location.svg'"></app-anchor>
+			  <app-anchor  (mouseenter)="mouseEnterHandler('call')" [imageUrl]="'../../assets/img/call.svg'"></app-anchor>
+			  <app-anchor  (mouseenter)="mouseEnterHandler('locked')" [imageUrl]="'../../assets/img/locked.svg'"></app-anchor>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

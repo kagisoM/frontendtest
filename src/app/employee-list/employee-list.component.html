@@ -1,0 +1,44 @@
+<div class="card" class="container">
+	<div class='card-header'>
+		{{pageTitle}}
+	</div>
+	<div class='card-body'>
+		<div class="row">
+			<div class="col-3">
+				<input [(ngModel)]="listFilter"
+					   type="text"
+					   class="form-control"
+					   id="filterInput"
+					   placeholder="Type to filter by name">
+			</div>
+			<div class="col">
+				<div *ngIf='listFilter' class="form-text text-muted">Filtered by: {{listFilter}}</div>
+			</div>
+		</div>
+		<div class='table-responsive'>
+			<table class='table' *ngIf='employees && employees.length'>
+				<thead>
+				<tr>
+					<th style="color:firebrick">Id</th>
+					<th>Name</th>
+					<th>Username</th>
+					<th>Email</th>
+					<th>City</th>
+					<th>Favourite</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr *ngFor='let employee of filteredEmployee'>
+					<td>{{ employees.id }}</td>
+					<td>{{ employees.name }}</td>
+					<td>{{ employees.username | lowercase }}</td>
+					<td>{{ employees.email }}</td>
+					<td>{{ employees.address.city }}</td>
+					<td><app-favourite></app-favourite></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,92 @@
+
+.c-tabs {
+	list-style: none;
+	margin: 0
+}
+
+.c-tabs__item {
+	background: #f8f9fa
+}
+
+.c-tabs__link {
+	display: block;
+	text-decoration: none
+}
+
+.c-tabs__link:hover {
+	background: 0 0;
+	color: inherit;
+	text-decoration: none
+}
+
+.c-tabs__list {
+	position: relative
+}
+
+.c-tabs__list:hover {
+	background: #439539;
+	color: inherit;
+	text-decoration: none
+}
+
+.c-tabs .active {
+	background: rgba(67, 149, 57, .75);
+	color: inherit
+}
+
+@media screen and (min-width: 45em) {
+	.u-padding--sm {
+		padding: 12px
+	}
+	.u-padding--md {
+		padding: 24px
+	}
+	.u-padding--lg {
+		padding: 48px
+	}
+	.u-padding--xlg {
+		padding: 192px
+	}
+}
+
+@media screen and (max-width: 44.9375em) {
+	.u-text--right__mobile {
+		text-align: right
+	}
+	.u-padding--sm {
+		padding: 6px
+	}
+	.u-padding--md {
+		padding: 12px
+	}
+	.u-padding--lg {
+		padding: 24px
+	}
+	.u-padding--xlg {
+		padding: 48px
+	}
+}
+
+.u-image--24 {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none
+}
+
+a:not([href]):not([tabindex]) {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer
+}
+
+a:not([href]):not([tabindex]):hover {
+	color: inherit;
+	text-decoration: none
+}
