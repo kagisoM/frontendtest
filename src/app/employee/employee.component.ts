@@ -27,37 +27,37 @@ export class EmployeeComponent implements OnInit {
   );
   }
   mouseEnterHandler(anchorName) {
-		switch (anchorName) {
-			case 'user':
-				this.label = "Hi, My name is";
-				this.value = '${this.employee.name.first} ${this.employee.name.last}';
-				break;
-			case 'email':
-				this.defaultActive = false;
-				this.label = "My email address is";
-				this.value = '${this.employee.email}';
-				break;
-			case 'calendar':
-				this.defaultActive = false;
-				this.label = "My birthday is";
-				this.value = formatDate(this.employee.dob.date, "dd/MM/yyyy", this.locale);
-				break;
-			case 'map-location':
-				this.defaultActive = false;
-				this.label = "My address is";
-				this.value = '${this.employee.location.city}';
-				break;
-			case 'call':
-				this.defaultActive = false;
-				this.label = "My phone number is";
-				this.value = '${this.employee.phone}';
-				break;
-			case 'locked':
-				this.defaultActive = false;
-				this.label = "My password is";
-				this.value = '${this.employee.login.password}';
-				break;
-			default:
-		}
+	switch (anchorName) {
+		case 'user':
+			this.label = "Hi, My name is";
+			this.value = `${this.employee.name.first} ${this.employee.name.last}`;
+			break;
+		case 'email':
+			this.defaultActive = false;
+			this.label = "My email address is";
+			this.value = `${this.employee.email}`;
+			break;
+		case 'calendar':
+			this.defaultActive = false;
+			this.label = "My birthday is";
+			this.value = formatDate(this.employee.dob.date, "dd/MM/yyyy", this.locale);
+			break;
+		case 'map-location':
+			this.defaultActive = false;
+			this.label = "My address is";
+			this.value = `${this.employee.location.city}`;
+			break;
+		case 'call':
+			this.defaultActive = false;
+			this.label = "My phone number is";
+			this.value = `${this.employee.phone}`;
+			break;
+		case 'locked':
+			this.defaultActive = false;
+			this.label = "My password is";
+			this.value = `${this.employee.login.password}`;
+			break;
+		default:
 	}
+}
 }
